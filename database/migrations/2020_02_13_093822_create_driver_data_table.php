@@ -15,6 +15,7 @@ class CreateDriverDataTable extends Migration
     {
         Schema::create('driver_data', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
             $table->string('reg_no', 30);
             $table->string('make', 30);
             $table->string('eng_no', 100);

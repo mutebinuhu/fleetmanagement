@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/fleet', 'FleetController@index')->name('fleet');
+Route::get('/inspectionofficer', 'InspectionofficerController@index');

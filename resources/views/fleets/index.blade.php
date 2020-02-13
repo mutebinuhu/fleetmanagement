@@ -71,11 +71,11 @@
                                                                         <input type="text" class="form-control" id="" name="mileage">
                                                                     </div>
                                                                 </div>
-                                                                    <div class="form-group">
-                                                                        <label for="description">General Description:</label>
-                                                                            <textarea class="form-control" rows="5" id="description" name="description"></textarea>
-                                                                        </div>  
-                                                               
+                                                                <div class="form-group">
+                                                                    <label for="description">General Description:</label>
+                                                                    <textarea class="form-control" rows="5" id="description" name="description"></textarea>
+                                                                </div>
+
                                                                 <button type="submit" class="btn btn-primary">Submit</button>
                                                             </form>
                                                         </div>
@@ -94,10 +94,29 @@
                             <div class="card">
                                 <div class="card-header text-center">My Fleets</div>
                                 <div class="card-body">
-                                    @foreach($Fleet as $data)
-                                    <li>{{$data->reg_no}}</li>
-                                    @endforeach
-                                    
+
+                                    <table class="table table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Reg No</th>
+                                                <th scope="col">Type </th>
+                                                <th scope="col">Make</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach($Fleet as $data)
+                                            <tr>
+                                                <th scope="row">{{$data->id}}</th>
+                                                <td>{{$data->reg_no}}</td>
+                                                <td>{{$data->type}}</td>
+                                                <td>{{$data->make}}</td>
+
+                                            </tr>
+                                            @endforeach
+
+                                        </tbody>
+                                    </table>
                                 </div>
 
                             </div>

@@ -25,6 +25,12 @@
                                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                                 Add Fleet
                                             </button>
+                                            @foreach($errors->all() as $error)
+                                            <p class="alert alert-danger my-1">{{$error}}</p>
+                                            @endforeach
+                                            @if(session('status'))
+                                            <button class="status btn btn-success">{{session('status')}}</button>
+                                            @endif
                                             <!-- Modal -->
                                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog modal-lg" role="document">
@@ -36,40 +42,41 @@
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <form>
+                                                            <form action="" method="POST">
+                                                                @csrf
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-6">
-                                                                        <label for="inputEmail4">Registration No</label>
-                                                                        <input type="email" class="form-control" id="inputEmail4">
+                                                                        <label for="Registration">Registration No</label>
+                                                                        <input type="text" class="form-control" id="" name="reg_no">
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label for="inputPassword4">Make</label>
-                                                                        <input type="text" class="form-control" id="inputPassword4">
+                                                                        <label for="Make">Make</label>
+                                                                        <input type="text" class="form-control" id="" name="make">
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label for="inputPassword4">Type</label>
-                                                                        <input type="text" class="form-control" id="inputPassword4">
+                                                                        <label for="Type">Type</label>
+                                                                        <input type="text" class="form-control" id="" name="type">
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label for="inputPassword4">Engine No</label>
-                                                                        <input type="text" class="form-control" id="inputPassword4">
+                                                                        <label for="Engine No">Engine No</label>
+                                                                        <input type="text" class="form-control" id="" name="eng_no">
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label for="inputPassword4">chasis No</label>
-                                                                        <input type="text" class="form-control" id="inputPassword4">
+                                                                        <label for="chasis No">chasis No</label>
+                                                                        <input type="text" class="form-control" id="" name="chasis_no">
                                                                     </div>
                                                                     <div class="form-group col-md-6">
                                                                         <label for="inputPassword4">Date Of Manufacture</label>
-                                                                        <input type="date" class="form-control" id="inputPassword4">
+                                                                        <input type="date" class="form-control" id="" name="date">
                                                                     </div>
                                                                     <div class="form-group col-md-6">
-                                                                        <label for="inputPassword4">Mileage</label>
+                                                                        <label for="">Mileage</label>
                                                                         <input type="text" class="form-control" id="inputPassword4">
                                                                     </div>
                                                                 </div>
                                                                     <div class="form-group">
-                                                                        <label for="comment">General Description:</label>
-                                                                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                                                                        <label for="description">General Description:</label>
+                                                                            <textarea class="form-control" rows="5" id="description" name="description"></textarea>
                                                                         </div>  
                                                                
                                                                 <button type="submit" class="btn btn-primary">Submit</button>

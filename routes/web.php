@@ -13,6 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
+
 });
 
 
@@ -21,4 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/fleet', 'FleetController@index')->name('fleet');
+Route::post('/fleet', 'FleetController@store')->name('fleet');
+
 Route::get('/inspectionofficer', 'InspectionofficerController@index');
+//Route::post('/inspectionofficer', 'InspectionofficerController@store');

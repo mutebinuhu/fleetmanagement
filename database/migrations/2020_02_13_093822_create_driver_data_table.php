@@ -24,6 +24,7 @@ class CreateDriverDataTable extends Migration
             $table->string('mileage', 50);
             $table->string('description');
             $table->string('url')->nullable();
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

@@ -1,19 +1,26 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use App\Fleet;
 use Illuminate\Http\Request;
-use Auth;
+
 
 
 class FleetController extends Controller
 {
-    //
+    //returns the index page for the fms
     public function index()
+
     {
-    	return view('fleets.index');
+    	$Fleet = Auth::User()
+    			->fleets()
+    			->get();
+    	
+    	return view('fleets.index', ['Fleet'=>$Fleet]);
+
     }
+    //stores the drivers data 
     public function store(Request $request)
     {
     	$url = uniqid();
@@ -48,5 +55,10 @@ class FleetController extends Controller
     	
       return redirect('/fleet')->with('status', 'Fleet added');
     	
+    }
+
+    public function show()
+    {
+
     }
 }

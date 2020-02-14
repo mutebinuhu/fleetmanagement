@@ -108,7 +108,7 @@
                                             @foreach($Fleet as $data)
                                             <tr>
                                                 <th scope="row">{{$data->id}}</th>
-                                                <td>{{$data->reg_no}}</td>
+                                               <td><a href="{{action('FleetController@show', $data->url)}}">{{$data->reg_no}}</a></td>
                                                 <td>{{$data->type}}</td>
                                                 <td>{{$data->make}}</td>
 

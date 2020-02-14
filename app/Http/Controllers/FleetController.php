@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class FleetController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     //returns the index page for the fms
     public function index()
 

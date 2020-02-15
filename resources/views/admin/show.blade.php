@@ -21,11 +21,11 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="Registration">Name</label>
-                                        <input type="text" class="form-control" id="" name="reg_no" value="{{$singleuser ->name}}">
+                                        <input type="text" class="form-control" id="" name="reg_no" value="{{$singleuser ->name}}" readonly="">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="Make">Email</label>
-                                        <input type="text" class="form-control" id="" name="make" value="{{$singleuser->email}}">
+                                        <input type="text" class="form-control" id="" name="make" value="{{$singleuser->email}}" readonly="">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputState">State</label>
@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="Engine No">Date Of Reg</label>
-                                        <input type="text" class="form-control" id="" name="eng_no" value="{{$singleuser->created_at}}">
+                                        <input type="text" class="form-control" id="" name="eng_no" value="{{$singleuser->created_at}}" readonly="">
                                     </div>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-primary ">Submit</button>

@@ -23,7 +23,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/fleet', 'FleetController@index')->name('fleet');
 Route::post('/fleet', 'FleetController@store')->name('fleet');
-Route::get('/fleet/show/{id}', 'FleetController@show');
+Route::get('fleet/show/{url}', 'FleetController@show');
+
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/show/{id}', 'AdminController@show');
+
 
 
 Route::get('/inspectionofficer', 'InspectionofficerController@index');

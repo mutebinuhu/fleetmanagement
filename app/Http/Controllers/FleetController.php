@@ -63,8 +63,8 @@ class FleetController extends Controller
 
     public function show($url)
   	{
-      $ticket = Fleet::whereurl($url)->firstOrFail();
+      $fleet = Fleet::whereurl($url)->firstOrFail();
       return view('fleets.show')
-                ->withticket($ticket);
+                ->withfleet($fleet);
   	}
 }

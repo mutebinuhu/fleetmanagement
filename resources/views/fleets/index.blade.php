@@ -111,7 +111,6 @@
                                                <td><a href="{{action('FleetController@show', $data->url)}}">{{$data->reg_no}}</a></td>
                                                 <td>{{$data->type}}</td>
                                                 <td>{{$data->make}}</td>
-
                                             </tr>
                                             @endforeach
 

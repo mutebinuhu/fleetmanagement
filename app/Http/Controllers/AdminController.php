@@ -15,10 +15,25 @@ class AdminController extends Controller
     				->withusers($users);
     }
 
-    public function show($url)
+    public function show($id)
     {
-    	$singleuser = User::whereid($url)->firstOrFail();
+    	$singleuser = User::whereid($id)->firstOrFail();
     	return view('admin.show')
     			->withsingleuser($singleuser);
+    }
+
+    public function update($id,  Request $request)
+    {
+        $updateType = User::whereid($id)->firstOrFail();
+
+        $request->validate([
+           'type'=>'required' 
+        ]);
+
+        $updateType->type = $request->get('type');
+        $updateType->save();
+    return redirect('/admin')->with('status', 'user updated to '. $updateType->type);
+
+
     }
 }

@@ -25,8 +25,10 @@ Route::get('/fleet', 'FleetController@index')->name('fleet');
 Route::post('/fleet', 'FleetController@store')->name('fleet');
 Route::get('fleet/show/{url}', 'FleetController@show');
 
+
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/show/{id}', 'AdminController@show');
+Route::patch('/admin/show/{id}', 'AdminController@update');
 
 
 

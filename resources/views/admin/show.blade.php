@@ -16,7 +16,11 @@
                     <div class="card">
                         <div class="card-header">{{$singleuser->name}}</div>
                         <div class="card-body">
+                             @foreach($errors->all() as $error)
+                                <p class="alert alert-danger my-1">{{$error}}</p>
+                            @endforeach
                             <form action="" method="POST">
+                                @method('patch')
                                 @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -29,11 +33,11 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputState">State</label>
-                                        <select id="inputState" class="form-control">
+                                        <select id="inputState" class="form-control" name="type">
                                             <option selected>{{$singleuser->type}}</option>
                                             <option>inspector</option>
                                             <option>driver</option>
-
+                                            <option>default</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-6">

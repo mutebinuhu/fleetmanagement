@@ -95,8 +95,8 @@
                                 <div class="card-header text-center">My Fleets</div>
                                 <div class="card-body">
 
-                                    <table class="table table-dark">
-                                        <thead>
+                                    <table class="table table-hover">
+                                        <thead class="bg-info">
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Reg No</th>

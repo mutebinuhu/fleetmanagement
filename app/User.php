@@ -9,6 +9,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+    //working on the authorisation
+    CONST ADMIN_TYPE = 'admin';
+
+    CONST  DEFAULT = 'default';
+
+    public function isAdmin()    {        
+    return $this->type === self::ADMIN_TYPE;    
+    }
+
+
 
     /**
      * The attributes that are mass assignable.

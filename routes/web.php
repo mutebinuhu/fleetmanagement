@@ -26,9 +26,9 @@ Route::post('/fleet', 'FleetController@store')->name('fleet');
 Route::get('fleet/show/{url}', 'FleetController@show');
 
 
-Route::get('/admin', 'AdminController@index');
-Route::get('/admin/show/{id}', 'AdminController@show');
-Route::patch('/admin/show/{id}', 'AdminController@update');
+Route::get('/admin', 'AdminController@index')->middleware('is_admin');
+Route::get('/admin/show/{id}', 'AdminController@show')->middleware('is_admin');
+Route::patch('/admin/show/{id}', 'AdminController@update')->middleware('is_admin');
 
 
 

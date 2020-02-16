@@ -48,6 +48,7 @@
                                     </div>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-primary ">Submit</button>
+                                        <a href="{{url('/admin')}}" type="submit" class="btn btn-danger ">Back</a>
                                     </div>
                             </form>
                             </div>

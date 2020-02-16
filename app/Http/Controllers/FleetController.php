@@ -67,4 +67,6 @@ class FleetController extends Controller
       return view('fleets.show')
                 ->withfleet($fleet);
   	}
+
+    
 }

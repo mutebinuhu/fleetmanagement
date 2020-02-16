@@ -102,6 +102,8 @@
                                                 <th scope="col">Reg No</th>
                                                 <th scope="col">Type </th>
                                                 <th scope="col">Make</th>
+                                                <th scope="col">Download</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -111,9 +113,9 @@
                                                <td><a href="{{action('FleetController@show', $data->url)}}">{{$data->reg_no}}</a></td>
                                                 <td>{{$data->type}}</td>
                                                 <td>{{$data->make}}</td>
+                                                <td><button type="submit" class="btn btn-primary">Download</button></td>
                                             </tr>
                                             @endforeach
-
                                         </tbody>
                                     </table>
                                 </div>

@@ -5,3 +5,9 @@ border-radius: 100%;
 border-bottom: 1px solid gray;	
 
 }
+.name{
+	border:none; 
+	border-bottom: 1px solid red;
+	 box-sizing:border-box; 
+	 border-radius: 0;
+}

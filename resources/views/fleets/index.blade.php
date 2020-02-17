@@ -113,7 +113,7 @@
                                                <td><a href="{{action('FleetController@show', $data->url)}}">{{$data->reg_no}}</a></td>
                                                 <td>{{$data->type}}</td>
                                                 <td>{{$data->make}}</td>
-                                                <td><button type="submit" class="btn btn-primary">Download</button></td>
+                                                <td><a href="{{action('FleetController@PrintOut', $data->url)}}" class="btn btn-primary">Download</a></td>
                                             </tr>
                                             @endforeach
                                         </tbody>

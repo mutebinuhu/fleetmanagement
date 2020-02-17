@@ -19,12 +19,13 @@ Route::get('/', function () {
 
 
 Auth::routes();
-Route::get('/page', 'HomeController@home')->name('home');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/fleet', 'FleetController@index')->name('fleet');
 Route::post('/fleet', 'FleetController@store')->name('fleet');
 Route::get('fleet/show/{url}', 'FleetController@show');
+Route::get('fleet/printout/{url}', 'FleetController@PrintOut');
+
 
 
 Route::get('/admin', 'AdminController@index')->middleware('is_admin');

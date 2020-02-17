@@ -68,5 +68,10 @@ class FleetController extends Controller
                 ->withfleet($fleet);
   	}
 
-    
+    public function PrintOut($url)
+    {   
+        $download = Fleet::whereurl($url)->firstOrFail();
+        return view('fleets.printout')
+                    ->withdownload($download);
+    }
 }

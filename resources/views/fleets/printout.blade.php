@@ -83,12 +83,11 @@ page[size="A4"] {
         <div class="col-4">
            <p>MINISTRY OF INTERNAL AFFAIRS <br>JINJA RD</p>
            <p>P.O.BOX 7191,  KAMPALA-UGANDA</p>
-
-         
+  
         </div>
         <div class="col-4 coat">
               <div class="coat-of-arm">
-                <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/112012/uganda_court_of_arms.png?itok=cmhoQ3Mh" width="100px" height="80px" class="coat-img" style="margin: auto;">
+                <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/112012/uganda_court_of_arms.png?itok=cmhoQ3Mh" width="100px" height="80px" class="coat-img" style="margin: auto;" onclick="printMe();">
               </div>
           
         </div>
@@ -103,13 +102,13 @@ page[size="A4"] {
         <h3>VEHICLE DEFECT VERIFICATION FORM PRIOR TO REPAIR</h3>
         <h3>JOB No:{{$download->id}}</h3>
         <p>To:<b>The Cheif Mechanical Engineer-Ministry of Works and Transport</b></p>
-        <p>Our ministry Vehiclle of particulars hereunder developed defecets as described in item 2. This is to requestyou have the vehicle inspected and furnish us with your findings </p>
+        <p>Our ministry Vehicle of particulars hereunder developed defecets as described in item 2. This is to requestyou have the vehicle inspected and furnish us with your findings </p>
       </div>
       <div class="data">
         <h3>1.0 <b>VEHICLE DATA</b></h3>
         <p>Registration Number : <span class="out-put">{{  $download->reg_no}}</span><br><br><span>Make:  <span class="out-put">{{ $download->make}}</span></span><br><br><span>Type: <span class=out-put>{{$download->type}}</span></span><br><br><span>Engine Number:<span class="out-put">{{ $download->eng_no}}</span></span><br><br><span>Chasis No: <span class="out-put">{{$download->chasis_no}}</span></span><br><br><span>Year Of Manufacture: <span class="out-put">{{$download->date}}</span></span><br><br><span>Mileage:<span class="out-put">{{$download->mileage}}.</span></span></p>
 
-        <h3>1.0 <b>General Description</b></h3>
+        <h3>2.0 <b>General Description</b></h3>
           <p>{{$download->description}}</p>
 
         <div class="my-info">
@@ -145,6 +144,11 @@ page[size="A4"] {
           <h3>CHIEF MECHANICAL ENGINEER......................................................</b> Sign................................................................</h3>
       </div>
     </page>
-
+<script type="text/javascript">
+  function printMe()
+  {
+    window.print();
+  }
+</script>
 </body>
 </html>

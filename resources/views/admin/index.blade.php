@@ -21,7 +21,7 @@
                                         <div class="text-center">
                                             <img src="http://www.gravatar.com/avatar/fc4ad839ad17d146f6239100c1baaeaf?s=80&d=mm&r=g" class="user-image text-center">
                                         </div>
-        
+                                  
                                             
                                         </div>
                                     </div>
@@ -42,7 +42,7 @@
     											</tr>
   											</thead>
   											<tbody>
-                                			@foreach($users as $user)
+                    @foreach($users as $user)
 
     											<tr>
       												<th scope="row">{{$user->id}}</th>
